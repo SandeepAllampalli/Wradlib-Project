@@ -4,7 +4,7 @@ Data Source: Binary data files downloaded from "https://opendata.dwd.de/climate_
 
 Useful python library: wradlib source: "https://docs.wradlib.org/en/stable/installation.html".
 
-Data Format: RADOLAN
+Data Format: RADOLAN (binary data type)
 
 Product type: RW
 
