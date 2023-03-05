@@ -21,25 +21,25 @@ import tarfile
 
 print(sys.path)
 os.getcwd()
-filepath = "C:/Users/v-sandeepa/Desktop/Personal/Thesis/"
+filepath = "C:/Users/v-sandeepa/Desktop/Personal/Thesis/"        # Directory folder path(replace it with your own directory path).
 os.chdir(filepath)
 
 # Define the directory where the archives are located
-tar_dir = filepath + "Raw Data/"
-dest_dir = filepath + "Extracted Data/"
+tar_dir = filepath + "Raw Data/"                                 # Sub folder created in the directory where the downloaded raw data was saved.
+dest_dir = filepath + "Extracted Data/"                          # Subfolder where the extracted data was saved.
 
-# Loop through all files in the directory
+# Loop through all files in the directory                       #---------------------------------------------------------------------------------------
 for filename in os.listdir(tar_dir):
     # Check if the file is a .tar.gz archive
     if filename.endswith('.tar.gz'):
         # Open the archive
-        tar = tarfile.open(os.path.join(tar_dir, filename))
+        tar = tarfile.open(os.path.join(tar_dir, filename))     # this piece of code extracts the raw data files to the extracted data folder   
         
         # Extract all files to a directory
         tar.extractall(path=dest_dir)
         
         # Close the archive
-        tar.close()
+        tar.close()                                             #---------------------------------------------------------------------------------------
 
 
 
